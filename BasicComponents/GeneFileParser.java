@@ -50,7 +50,7 @@ public class GeneFileParser {
 		}
 
 		System.out.println("Done parsing genes file");
-		System.out.println("All genes " + this._fullGenes.size() + " unique " + this._uniqueGenes.size());
+		System.out.println("All genes " + this._fullGenes.size());
 		reader.close();
 		fr.close();
 		reader = null;
