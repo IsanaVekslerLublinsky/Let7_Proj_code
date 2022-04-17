@@ -243,7 +243,7 @@ public class GeneFileParser {
 
 	//new July 2020
 	public void annotateGenesWithInfo(String riboSeqData) throws Exception{
-		String outFile = "/media/isana/Data/Genomes/C_elegans/RiboSeqTable_statistics";
+		String outFile = Parameters.outFilePwd + "RiboSeqTable_statistics";
 		BufferedWriter out = new BufferedWriter(new FileWriter(outFile));
 		BufferedReader reader = new BufferedReader(new FileReader(riboSeqData));
 		String header = reader.readLine(); //"gene.name","Geneid","ribo.log2FC","ribo.padj"
