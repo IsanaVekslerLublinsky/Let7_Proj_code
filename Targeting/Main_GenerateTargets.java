@@ -42,7 +42,7 @@ public class Main_GenerateTargets {
 			if(i==Parameters.miRNAindex)
 			{
 				miRNA mir = miRNAparser._miRNAs.get(i);
-				System.out.println(mir._bestEnergy);
+				//System.out.println(mir._bestEnergy);
 				String outFile1 = Parameters.outFilePwd + "alignments_" + mir._name + suffix;
 				String outFile2 = Parameters.outFilePwd + "alignments_" + mir._name + suffix + ".html";
 				String outFile3 = Parameters.outFilePwd + "alignments_" + mir._name + suffix + ".csv";
@@ -302,11 +302,13 @@ public class Main_GenerateTargets {
 				
 				if(dupInfo._fullDuplex._seedTypeNew!=-1 && dupInfo._fullDuplex._loopSize<=14 && dupInfo._fullDuplex._targetPart.length()>=16)
 				{
-					if(gene._geneName.equals("ins-35"))
-						System.out.println(dupInfo._fullDuplex._targetPart);
+					//if(gene._geneName.equals("ins-35"))
+					//	System.out.println(dupInfo._fullDuplex._targetPart);
 					
+					//Fix 17/4/2022
 					if(duplexes.size()>0 && (duplexes.get(duplexes.size()-1)._fullDuplex._duplex_1D.equals(dupInfo._fullDuplex._duplex_1D) ||
-							                duplexes.get(duplexes.size()-1)._fullDuplex._targetPart.contains(dupInfo._fullDuplex._targetPart))) {
+							                duplexes.get(duplexes.size()-1)._fullDuplex._targetPart.contains(dupInfo._fullDuplex._targetPart) ||
+											dupInfo._fullDuplex._targetPart.contains(duplexes.get(duplexes.size()-1)._fullDuplex._targetPart))) {
 						//nothing
 						//System.out.println()
 					}
